@@ -1,10 +1,16 @@
 import { Alert, Button, Text, View } from 'react-native'
+import { data } from './data'
 
 export default function App() {
 
-  function handleButton() {
+  function handleNumber() {
     const num = Math.floor(Math.random() * 100)
     Alert.alert('Sorteio', `O número da sorte é ${num}`)
+  }
+  function handleText() {
+    const indice = Math.floor(Math.random() * data.length)
+    const texto = data[indice]
+    Alert.alert('Frase do dia', texto)
   }
 
   return (
@@ -25,8 +31,12 @@ export default function App() {
         Clique para sortear um número entre 0 e 100
       </Text>
       <Button
-        title='Clique para sortear'
-        onPress={handleButton}
+        title='Clique para sortear um número'
+        onPress={handleNumber}
+      />
+      <Button
+        title='Clique para sortear uma frase'
+        onPress={handleText}
       />
     </View>
   )
