@@ -1,25 +1,44 @@
-import { SafeAreaView, Text, View } from 'react-native'
+import { Image, SafeAreaView, StyleSheet, View } from 'react-native'
 
-const STYLES = {
-  view: {
-    backgroundColor: '#ff0000',
+const STYLES = StyleSheet.create({
+  quadrado01: {
+    width: 50,
+    height: 50
   },
-  fullView: {
-    height: '100%'
+  quadrado02: {
+    width: 100,
+    height: 100
   },
-  text: {
-    fontSize: 30
+  quadrado03: {
+    width: 150,
+    height: 150
+  },
+  bgVermelho: {
+    backgroundColor: 'red'
+  },
+  bgVerde: {
+    backgroundColor: 'green'
+  },
+  bgAzul: {
+    backgroundColor: 'blue'
+  },
+  round: {
+    borderRadius: 150,
+    borderWidth: 4,
+    borderColor: 'blue'
   }
-}
+})
 
 export default function App() {
   return (
     <SafeAreaView>
-      <View
-        style={[STYLES.view, STYLES.fullView]}
-      >
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <View style={[STYLES.quadrado01, STYLES.bgVermelho]} />
+      <View style={[STYLES.quadrado02, STYLES.bgVerde]} />
+      <View style={[STYLES.quadrado03, STYLES.bgAzul, STYLES.round]} />
+      <Image
+        source={{ uri: 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg' }}
+        style={[STYLES.quadrado03, STYLES.bgAzul, STYLES.round]}
+      />
     </SafeAreaView>
   )
 }
