@@ -4,7 +4,10 @@ import styles from '../styles'
 
 function Button(props) {
   return (
-    <Pressable style={[styles.button, props.color && { backgroundColor: props.color }]} >
+    <Pressable
+      style={[styles.button, props.color && { backgroundColor: props.color }]}
+      onPress={props.onPress}
+    >
       <Text style={[styles.buttonText]} >
         {props.text}
       </Text>
