@@ -5,7 +5,7 @@ import styles from '../styles'
 function Container(props) {
   return (
     <View style={[styles.container]}>
-      <SafeAreaView style={[props.centerScreen ? styles.centerScreen : { flex: 1 }]} >
+      <SafeAreaView style={[props.centerScreen ? styles.centerScreen : { flex: 1, width: '100%' }]} >
         {props.children}
       </SafeAreaView >
     </View>

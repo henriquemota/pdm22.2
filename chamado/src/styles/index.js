@@ -5,11 +5,10 @@ const { width, height } = Dimensions.get('screen')
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#202024'
+    backgroundColor: '#202024',
   },
   centerScreen: {
     flex: 1,
-    // flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -22,7 +21,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     color: '#fff',
-    marginVertical: 8
+    marginVertical: 8,
+    width: width - 32
   },
   input: {
     width: width - 32,
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#00875F',
     height: 56,
+    width: width - 32,
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 8,
