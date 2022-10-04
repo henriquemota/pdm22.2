@@ -1,6 +1,7 @@
 import React from 'react'
-import { Image, Pressable, SafeAreaView, Text, TextInput, View } from 'react-native'
+import { Image, SafeAreaView, Text, TextInput, View } from 'react-native'
 import Logo from '../assets/logo.png'
+import Button from '../components/Button'
 import styles from '../styles'
 
 function Login() {
@@ -30,16 +31,9 @@ function Login() {
             style={[styles.input]}
             placeholder='Senha'
             placeholderTextColor="rgba(225,255,255,0.4)"
+            secureTextEntry
           />
-          <Pressable
-            style={[styles.button]}
-          >
-            <Text
-              style={[styles.buttonText]}
-            >
-              Entrar
-            </Text>
-          </Pressable>
+          <Button text='Entrar' color='#0000ff' />
         </View>
       </SafeAreaView>
     </View>

@@ -1,6 +1,7 @@
 import Login from './src/views/Login'
 
-
-export default function App() {
+function App() {
   return <Login />
 }
+
+export default App
