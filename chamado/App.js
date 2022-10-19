@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import { Button, SafeAreaView, Text } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+import Home from './src/views/Home'
+import Login from './src/views/Login'
+
+const Stack = createNativeStackNavigator()
 
 function App() {
-  const [numero, setNumero] = useState(10)
-
-  function incrementar() {
-    setNumero(numero + 1)
-  }
 
   return (
-    <SafeAreaView>
-      <Text style={{ alignSelf: 'center', fontSize: 30 }}>
-        {numero}
-      </Text>
-      <Button title='incrementar' onPress={incrementar} />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
