@@ -12,6 +12,7 @@ function Input(props) {
         placeholderTextColor="rgba(225,255,255,0.4)"
         secureTextEntry={props.secureTextEntry}
         keyboardType={props.keyboardType}
+        {...props}
       />
     </React.Fragment>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, SafeAreaView, Text, View } from 'react-native'
+import { Button, Text } from 'react-native'
+import { Container } from '../components'
 import useAuth from '../hooks/auth'
 
 function Home() {
@@ -7,14 +8,10 @@ function Home() {
   const { doLogout } = useAuth()
 
   return (
-    <View>
-      <SafeAreaView>
-        <View>
-          <Text>Home</Text>
-          <Button title='Sair' onPress={doLogout} />
-        </View>
-      </SafeAreaView>
-    </View>
+    <Container>
+      <Text>Home</Text>
+      <Button title='Sair' onPress={doLogout} />
+    </Container>
   )
 }
 
