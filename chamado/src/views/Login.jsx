@@ -6,8 +6,6 @@ function Login() {
   const [form, setForm] = useState({ login: '', senha: '' })
   const { doLogin } = useAuth()
 
-  console.log(form)
-
   return (
     <Container centerScreen>
       <ImgLogo />
