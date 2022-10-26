@@ -19,14 +19,7 @@ function Post() {
   }, [route.params])
 
   return (
-    <View style={{ flex: 1 }}>
-      <Card style={{ margin: 8 }}>
-        <Card.Title title={post.title} />
-        <Card.Content>
-          <Text>{post.body}</Text>
-        </Card.Content>
-      </Card>
-    </View>
+    <Detail data={post} />
   )
 }
 
@@ -34,10 +27,6 @@ function PostList() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    getPosts()
-  }, [])
-
-  function getPosts() {
     axios.get(`${BASE_URL}/posts`)
       .then(({ data, status }) => {
         if (status === 200) setPosts(data)
@@ -46,7 +35,7 @@ function PostList() {
       .catch((err) => {
         setPosts([])
       })
-  }
+  }, [])
 
   return (
     <View style={{ flex: 1, padding: 8 }}>
