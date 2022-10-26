@@ -1,11 +1,18 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { SafeAreaView } from 'react-native'
+import { View } from 'react-native'
+import { Button } from 'react-native-paper'
 
 function Home() {
-  return (
-    <SafeAreaView>
 
-    </SafeAreaView>
+  const navigation = useNavigation()
+
+  return (
+    <View style={{ padding: 16 }}>
+      <Button style={{ marginTop: 16 }} onPress={() => navigation.navigate('CEP')}>CEP</Button>
+      <Button style={{ marginTop: 16 }} onPress={() => navigation.navigate('Posts')}>Posts</Button>
+
+    </View>
   )
 }
 
