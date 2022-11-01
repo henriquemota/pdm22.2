@@ -22,6 +22,13 @@ function Home() {
       >
         Posts
       </Button>
+      <Button
+        mode='contained'
+        style={{ marginTop: 16 }}
+        onPress={() => navigation.navigate('Todos')}
+      >
+        Todos
+      </Button>
 
     </View>
   )
