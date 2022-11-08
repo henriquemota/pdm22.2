@@ -29,6 +29,13 @@ function Home() {
       >
         Todos
       </Button>
+      <Button
+        mode='contained'
+        style={{ marginTop: 16 }}
+        onPress={() => navigation.navigate('SQLite')}
+      >
+        SQLite
+      </Button>
 
     </View>
   )

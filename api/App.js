@@ -5,6 +5,7 @@ import React from 'react'
 import CEP from './src/pages/CEP'
 import Home from './src/pages/Home'
 import { Post, PostList } from './src/pages/Post'
+import SQLite from './src/pages/SQLite'
 import { TodoForm, TodoList } from './src/pages/Todo'
 
 const Stack = createNativeStackNavigator()
@@ -19,6 +20,7 @@ function App() {
         <Stack.Screen name="Post" component={Post} />
         <Stack.Screen name="Todos" component={TodoList} />
         <Stack.Screen name="Todo" component={TodoForm} />
+        <Stack.Screen name="SQLite" component={SQLite} />
       </Stack.Navigator>
     </NavigationContainer>
   )

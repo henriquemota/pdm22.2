@@ -12,7 +12,6 @@ function TodoList() {
     <View style={{ padding: 16 }}>
       <Button mode='contained' onPress={() => navigation.navigate('Todo')}>Novo item</Button>
       <FlatList
-
       />
     </View>
   )
